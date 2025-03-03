@@ -10,10 +10,10 @@ To use Simple Website Darkmode on your website, follow the steps:
 
 3. In your HTML, make the following changes:
 
-   In the `<head>` tag, add the following line:
+   In the `<head>` tag, add the following line (change `darkmode.js` to wherever the script is located on your site):
 
    ```html
-   <script src="darkmode.js"></script>
+   <script src="./darkmode.js"></script>
    ```
 
    Early in the `<body>` tag (e.g. immediately after it opens), add the following two lines:
