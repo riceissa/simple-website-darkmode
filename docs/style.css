@@ -1,0 +1,11 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    background-color: light-dark(#ffffff, rgb(40, 41, 42));
+    color: light-dark(#000000, #d4be98); /* trying out this color which I found on https://yasserarg.com/tb.css */
+}
+
+a:link { color: light-dark(rgb(0, 102, 204), #f0ca35); }
+a:visited { color: light-dark(#551A8B, #d04a09); }
