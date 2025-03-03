@@ -10,8 +10,23 @@
 <body>
   <div id="darkmode-menu"></div>
   <script>darkmode.initialize();</script>
+
   <p>Hello world.</p>
-  <p>The rest of this page is just junk to make the page load slower, so that you can see there is not weird flicker when the page loads.</p>
+
+  <p>The rest of this page is just junk to make the page load slower, so that
+  you can see there is no weird flicker when the page loads. In bad
+  implementations of darkmode, the darkmode script doesn’t run until the whole
+  page loads, so while the page is loading the default color scheme (usually
+  light) is used, and then a moment later the dark theme is loaded (this is
+  assuming the user prefers dark; if the user prefers light, then there is no
+  theme switching so no flicker either). For the user, this means getting
+  blinded for a moment by a wall of white, and then going back to the expected
+  dark screen. The implementation here doesn’t have this disadvantage: the
+  script runs as soon as the <code>&lt;body&gt;</code> tag opens, but before
+  the rest of the content loads, so the screen is dark from the start.</p>
+
+  <hr>
+
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -1829,5 +1844,8 @@
 
   <p><a href="https://pdimagearchive.org/images/015221c2-69f7-4128-84d4-255a63d40a45/">Image source</a></p>
   <img src="schachtzabel.jpg" width="500" />
+
+  <p><a href="https://pdimagearchive.org/images/11ed28d3-bfd9-401b-a491-fb4d05b2fbe7/">Image source</a></p>
+  <img src="geddes.jpg" width="500" />
 </body>
 </html>
