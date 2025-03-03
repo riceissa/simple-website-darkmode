@@ -44,8 +44,8 @@ To use Simple Website Darkmode on your website, follow the steps:
    <script>darkmode.initialize();</script>
    ```
 
-   Wherever you add the `<div>` tag is where the color scheme changing menu
-   appears.
+   The `<div>` tag must come before the `<script>` tag. Wherever you add the
+   `<div>` tag is where the color scheme changing menu appears.
 
    See [`index.html`](docs/index.html) for an example of what your HTML will
    look like.
