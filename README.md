@@ -26,3 +26,5 @@ To use Simple Website Darkmode on your website, follow the steps:
    Wherever you add the `<div>` tag is where the color scheme changing menu appears.
 
    See [`index.html`](docs/index.html) for an example of what your HTML will look like.
+
+See the [demo](https://riceissa.github.io/simple-website-darkmode/) for what the end result will like.
