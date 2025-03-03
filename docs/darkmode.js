@@ -63,6 +63,4 @@
         add_darkmode_menu();
         set_theme_from_local_storage();
     };
-
-    // document.addEventListener('DOMContentLoaded', darkmode.set_theme_from_local_storage);
 }(window.darkmode = window.darkmode || {}));
