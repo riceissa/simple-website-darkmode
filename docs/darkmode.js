@@ -1,3 +1,5 @@
+// Simple Website Darkmode
+// Author: Issa Rice
 // License: CC0 https://creativecommons.org/publicdomain/zero/1.0/
 
 // We use a self-executing anonymous function to create a separate namespace
