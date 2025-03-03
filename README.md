@@ -51,4 +51,4 @@ To use Simple Website Darkmode on your website, follow the steps:
    look like.
 
 See the [demo](https://riceissa.github.io/simple-website-darkmode/) for what
-the end result will like.
+the end result will look like.
