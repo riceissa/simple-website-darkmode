@@ -4,7 +4,11 @@
 
 To use Simple Website Darkmode on your website, follow the steps:
 
-1. In your CSS, define all of your colors using [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). You do not need to write `:root { color-scheme: light dark; }` in your CSS; the `darkmode.js` script takes care of that for you. See [`style.css`](docs/style.css) for an example of what your CSS will look like.
+1. In your CSS, define all of your colors using [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark).
+
+   You do not need to write `:root { color-scheme: light dark; }` in your CSS; the `darkmode.js` script takes care of that for you as long as the user has enabled JavaScript. However, adding the `:root { ... }` is still recommended because then color scheme switching will also work for users who have disabled JavaScript (in this case, the site will just use the OS preference).
+
+   See [`style.css`](docs/style.css) for an example of what your CSS will look like.
 
 2. Serve the [`darkmode.js`](docs/darkmode.js) script from your site ([raw download link](https://raw.githubusercontent.com/riceissa/simple-website-darkmode/refs/heads/master/docs/darkmode.js)). Below, we will assume it exists at `./darkmode.js`.
 
