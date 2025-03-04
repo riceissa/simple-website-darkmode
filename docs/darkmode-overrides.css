@@ -25,5 +25,5 @@ body.dark img.darkmode-invert {
     filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
 }
 body.dark img.darkmode-original {
-    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+    filter: none;
 }

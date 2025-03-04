@@ -74,14 +74,14 @@ To use Simple Website Darkmode on your website, follow the steps:
    just use that preference.
 
 5. (Optional) If you want your images to also be darkmode-friendly, you can add
-   the class `darkmode-inversion` to the images you want to invert, and
-   `darkmode-no-inversion` to the images you don't want to invert (but still
-   dim down for darkmode). If you don't add either class, the image will be
+   the class `darkmode-invert` to the images you want to invert, and
+   `darkmode-dim` to the images you don't want to invert but still
+   dim down for darkmode. If you don't add either class, the image will be
    untouched. For example, your `<img>` tags will look like:
 
    ```html
-   <img src="bar-graph.png" width="500" class="darkmode-inversion" />
-   <img src="geddes.jpg" width="500" class="darkmode-no-inversion" />
+   <img src="bar-graph.png" width="500" class="darkmode-invert" />
+   <img src="geddes.jpg" width="500" class="darkmode-dim" />
    ```
 
    If you want to automate classifying the images, you can use
@@ -93,10 +93,10 @@ To use Simple Website Darkmode on your website, follow the steps:
 
    ```css
    /* The CSS below is modified from https://invertornot.com/ */
-   body.dark img.darkmode-no-inversion {
+   body.dark img.darkmode-dim {
        filter: grayscale(50%) brightness(85%);
    }
-   body.dark img.darkmode-inversion {
+   body.dark img.darkmode-invert {
        filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
    }
    ```
