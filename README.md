@@ -120,14 +120,15 @@ Serve the [`darkmode.js`](docs/darkmode.js) script from your site ([raw download
 
 In your HTML, make the following changes:
 
-In the `<head>` tag, add the following line (change `./darkmode.js` to
-wherever the script is located on your site):
+In the `<head>` tag (anywhere in it), add the following line (change
+`./darkmode.js` to wherever the script is located on your site):
 
 ```html
 <script src="./darkmode.js"></script>
 ```
 
-If you want to use the jsDelivr CDN instead, then add the following:
+If you want to use the jsDelivr CDN rather than hosting the script yourself,
+then add the following instead:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode.js"></script>
