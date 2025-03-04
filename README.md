@@ -18,9 +18,13 @@ two lines:
 <script>darkmode.initialize();</script>
 ```
 
-That's it! This basic setup will only work for simple websites that don't use a
-lot of styling/custom classes. If this basic setup doesn't produce the result
-you want, then move onto the more advanced setup below.
+That's it! See the
+[basic demo page](https://riceissa.github.io/simple-website-darkmode/basic-demo.html)
+([source](https://github.com/riceissa/simple-website-darkmode/blob/master/docs/basic-demo.html))
+for what the end result will look like. This basic setup will only work for
+simple websites that don't use a lot of styling/custom classes. If this basic
+setup doesn't produce the result you want, then move onto the more advanced
+setup below.
 
 ## More advanced setup (if the basic setup doesn't fit your needs)
 
