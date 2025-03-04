@@ -20,7 +20,7 @@ body {
 a:link { color: rgb(0, 102, 204); } /* Define your light color scheme as usual */
 a:visited { color: #551A8B; }
 body.dark a:link { color: #f0ca35; } /* Then put your darkmode overrides afterward */
-body.dark a:visited { color: #d04a09; }
+body.dark a:visited { color: #ca7d39; }
 
 /* You can mix between Option A and Option B as in this CSS file. */
 
