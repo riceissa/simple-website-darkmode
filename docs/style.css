@@ -4,9 +4,17 @@
 
 body {
     font-family: sans-serif;
+
+    /* Option A for defining your color schemes: use light-dark() */
     background-color: light-dark(#ffffff, rgb(40, 41, 42));
     color: light-dark(#000000, #d4be98); /* trying out this color which I found on https://yasserarg.com/tb.css */
 }
+
+/* Option B for defining your color schemes: */
+a:link { color: rgb(0, 102, 204); } /* Define your light color scheme as usual */
+a:visited { color: #551A8B; }
+body.dark a:link { color: #f0ca35; } /* Then put your darkmode overrides afterward */
+body.dark a:visited { color: #d04a09; }
 
 /* The CSS below is the suggested ones from https://invertornot.com/ */
 body.dark img.darkmode-no-inversion {
@@ -15,12 +23,3 @@ body.dark img.darkmode-no-inversion {
 body.dark img.darkmode-inversion {
     filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
 }
-
-
-/* Light color scheme, defined as usual */
-a:link { color: rgb(0, 102, 204); }
-a:visited { color: #551A8B; }
-
-/* Darkmode overrides: */
-body.dark a:link { color: #f0ca35; }
-body.dark a:visited { color: #d04a09; }
