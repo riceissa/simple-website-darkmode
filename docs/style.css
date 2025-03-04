@@ -1,11 +1,17 @@
 :root {
+    /* Keep this so that even if the user has disabled JavaScript, the
+     * OS/browser preference for light/dark will be honored. Note that this
+     * requires setting the theme via light-dark() (Option A below) rather than
+     * the body.dark override method (Option B). */
     color-scheme: light dark;
 }
 
 body {
     font-family: sans-serif;
 
-    /* Option A for defining your color schemes: use light-dark() */
+    /* Option A for defining your color schemes: use light-dark(). The first
+     * value is used for light mode and the second value is used for dark
+     * mode. */
     background-color: light-dark(#ffffff, rgb(40, 41, 42));
     color: light-dark(#000000, #d4be98); /* trying out this color which I found on https://yasserarg.com/tb.css */
 }
@@ -16,7 +22,9 @@ a:visited { color: #551A8B; }
 body.dark a:link { color: #f0ca35; } /* Then put your darkmode overrides afterward */
 body.dark a:visited { color: #d04a09; }
 
-/* The CSS below is modified ones from https://invertornot.com/ */
+/* You can mix between Option A and Option B as in this CSS file. */
+
+/* For images. The CSS below is modified from https://invertornot.com/ */
 body.dark img.darkmode-no-inversion {
     filter: grayscale(50%) brightness(85%);
 }
