@@ -50,20 +50,6 @@
         set_visual_feedback_color(site_specific_preferred_color);
     }
 
-    // This function runs every time the menu buttons (auto/light/dark) are
-    // clicked.
-    darkmode.set_color = function (color) {
-        set_root_color_scheme(color);
-        localStorage.setItem("color", color);
-        set_visual_feedback_color(color);
-    };
-
-    // This function runs once on each page load.
-    darkmode.initialize = function () {
-        add_darkmode_menu();
-        set_theme_from_local_storage();
-    };
-
     function set_body_class(color) {
         if (color === "dark") {
             if (!document.body.classList.contains("dark")) {
@@ -87,25 +73,26 @@
         }
     }
 
-    const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-            if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
-                recompute_body_class();
-            }
-        });
-    });
-
-    // This fires whenever the :root { color-scheme } value changes, i.e.
-    // whenever the user clicks on the darkmode menu on the site.
-    observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['style']
-    });
-
     const darkmode_preference = window.matchMedia("(prefers-color-scheme: dark)");
     // This fires whenever the OS/browser preference changes. This might happen
     // for example when someone has their OS color scheme set to the movement
     // of the sun, so that e.g. at sunset the OS theme gets changed to dark
     // mode.
     darkmode_preference.addEventListener("change", e => recompute_body_class());
+
+    // This function runs every time the menu buttons (auto/light/dark) are
+    // clicked.
+    darkmode.set_color = function (color) {
+        set_root_color_scheme(color);
+        localStorage.setItem("color", color);
+        set_visual_feedback_color(color);
+        recompute_body_class();
+    };
+
+    // This function runs once on each page load.
+    darkmode.initialize = function () {
+        add_darkmode_menu();
+        set_theme_from_local_storage();
+        recompute_body_class();
+    };
 }(window.darkmode = window.darkmode || {}));
