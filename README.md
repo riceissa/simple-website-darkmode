@@ -4,8 +4,30 @@
 
 To use Simple Website Darkmode on your website, follow the steps:
 
-1. In your CSS, define all of your colors using
-   [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark).
+1. For defining your darkmode color scheme, you have two choices.
+
+   Option A: In your CSS, you can define all of your colors using
+   [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). Your CSS will look like:
+
+   ```css
+   a:link { color: light-dark(rgb(0, 102, 204), #f0ca35); }
+   a:visited { color: light-dark(#551A8B, #d04a09); }
+   ```
+
+   Option B: You can define your light color scheme normally, then at the
+   bottom of your CSS you can define your darkmode overrides, like this:
+
+   ```css
+   /* Light color scheme, defined as usual */
+   a:link { color: rgb(0, 102, 204); }
+   a:visited { color: #551A8B; }
+
+   /* ... rest of your styling goes here ... */
+
+   /* Darkmode overrides: */
+   body.dark a:link { color: #f0ca35; }
+   body.dark a:visited { color: #d04a09; }
+   ```
 
    Your CSS should probably start with the following:
 
