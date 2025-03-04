@@ -9,8 +9,8 @@ Near the end of your `<head>` tag (in particular, after any of your own CSS),
 add the following two lines:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode-overrides.css">
+<script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode/docs/darkmode.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode/docs/darkmode-overrides.css">
 ```
 
 Early in the `<body>` tag (e.g. immediately after it opens), add the following
@@ -134,7 +134,7 @@ If you want to use the jsDelivr CDN rather than hosting the script yourself,
 then add the following instead:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode/docs/darkmode.js"></script>
 ```
 
 Early in the `<body>` tag (e.g. immediately after it opens), add the
