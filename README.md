@@ -31,7 +31,7 @@ setup below.
 For the more advanced setup, you will have to:
 
 - Update your CSS styling to add a darkmode to it
-- Serve the `darkmode.js` JavaScript
+- Optionally serve the `darkmode.js` JavaScript
 - Update your HTML to add the theme-changing menu and to initialize the script
 
 We will go through each of these in turn.
