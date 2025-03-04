@@ -10,3 +10,11 @@ body {
 
 a:link { color: light-dark(rgb(0, 102, 204), #f0ca35); }
 a:visited { color: light-dark(#551A8B, #d04a09); }
+
+/* The CSS below is the suggested ones from https://invertornot.com/ */
+body.dark img.darkmode-no-inversion {
+    filter: grayscale(50%);
+}
+body.dark img.darkmode-inversion {
+    filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
+}

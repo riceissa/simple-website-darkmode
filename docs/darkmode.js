@@ -63,4 +63,49 @@
         add_darkmode_menu();
         set_theme_from_local_storage();
     };
+
+    function set_body_class(color) {
+        if (color === "dark") {
+            if (!document.body.classList.contains("dark")) {
+                document.body.classList.add("dark");
+            }
+        } else {
+            if (document.body.classList.contains("dark")) {
+                document.body.classList.remove("dark");
+            }
+        }
+    }
+
+    function recompute_body_class() {
+        const site_color_scheme = getComputedStyle(document.documentElement).getPropertyValue('color-scheme').trim();
+        if (site_color_scheme === "dark" || site_color_scheme === "light") {
+            set_body_class(site_color_scheme);
+        } else {
+            // site_color_scheme is auto, so fall back to the OS preference
+            const os_prefers_dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            set_body_class(os_prefers_dark ? "dark" : "light");
+        }
+    }
+
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                recompute_body_class();
+            }
+        });
+    });
+
+    // This fires whenever the :root { color-scheme } value changes, i.e.
+    // whenever the user clicks on the darkmode menu on the site.
+    observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['style']
+    });
+
+    const darkmode_preference = window.matchMedia("(prefers-color-scheme: dark)");
+    // This fires whenever the OS/browser preference changes. This might happen
+    // for example when someone has their OS color scheme set to the movement
+    // of the sun, so that e.g. at sunset the OS theme gets changed to dark
+    // mode.
+    darkmode_preference.addEventListener("change", e => recompute_body_class());
 }(window.darkmode = window.darkmode || {}));
