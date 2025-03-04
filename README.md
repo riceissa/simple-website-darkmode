@@ -57,7 +57,8 @@ To use Simple Website Darkmode on your website, follow the steps:
    See [`index.html`](docs/index.html) for an example of what your HTML will
    look like.
 
-4. (Optional) Your CSS should also probably start with the following:
+4. (Optional; only works if you picked Option A above.) Your CSS should also
+   probably start with the following:
 
    ```css
    :root {
