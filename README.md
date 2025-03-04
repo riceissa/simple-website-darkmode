@@ -1,5 +1,8 @@
 # Simple Website Darkmode
 
+A simple darkmode color scheme script for your website, with a three-state menu
+(auto/light/dark).
+
 ## Basic setup
 
 Near the end of your `<head>` tag (in particular, after any of your own CSS),
