@@ -1,5 +1,29 @@
 # Simple Website Darkmode
 
+## Basic setup
+
+Near the end of your `<head>` tag (in particular, after any of your own CSS),
+add the following two lines:
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode-overrides.css">
+```
+
+Early in the `<body>` tag (e.g. immediately after it opens), add the following
+two lines:
+
+```html
+<div id="darkmode-menu"></div>
+<script>darkmode.initialize();</script>
+```
+
+That's it! This basic setup will only work for simple websites that don't use a
+lot of styling/custom classes. If this basic setup doesn't produce the result
+you want, then move onto the more advanced setup below.
+
+## More advanced setup (if the basic setup doesn't fit your needs)
+
 [Demo](https://riceissa.github.io/simple-website-darkmode/)
 
 To use Simple Website Darkmode on your website, follow the steps:
