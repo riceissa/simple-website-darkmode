@@ -93,7 +93,7 @@ To use Simple Website Darkmode on your website, follow the steps:
    ```css
    /* The CSS below is the suggested ones from https://invertornot.com/ */
    body.dark img.darkmode-no-inversion {
-       filter: grayscale(50%);
+       filter: grayscale(50%) brightness(85%);
    }
    body.dark img.darkmode-inversion {
        filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
