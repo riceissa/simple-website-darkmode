@@ -50,7 +50,7 @@ Option A: In your CSS, you can define all of your colors using
 
 ```css
 a:link { color: light-dark(rgb(0, 102, 204), #f0ca35); }
-a:visited { color: light-dark(#551A8B, #d04a09); }
+a:visited { color: light-dark(#551A8B, #ca7d39); }
 ```
 
 Option B: You can define your light color scheme normally, then at the
@@ -65,7 +65,7 @@ a:visited { color: #551A8B; }
 
 /* Darkmode overrides: */
 body.dark a:link { color: #f0ca35; }
-body.dark a:visited { color: #d04a09; }
+body.dark a:visited { color: #ca7d39; }
 ```
 
 See [`style.css`](docs/style.css) for an example of what your CSS will look
