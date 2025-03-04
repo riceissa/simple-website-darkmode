@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Simple Website Darkmode</title>
+  <script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@master/docs/darkmode.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="darkmode-menu"></div>
+  <script>darkmode.initialize();</script>
+
+  <h1>Simple Website Darkmode – demo page</h1>
+
+  <p>The rest of this page (after the image gallery) is just junk to make the page load slower, so that
+  you can see there is no weird flicker when the page loads. In bad
+  implementations of darkmode, the darkmode script doesn’t run until the whole
+  page loads, so while the page is loading the default color scheme (usually
+  light) is used, and then a moment later the dark theme is loaded (this is
+  assuming the user prefers dark; if the user prefers light, then there is no
+  theme switching so no flicker either). For the user, this means getting
+  blinded for a moment by a wall of white, and then going back to the expected
+  dark screen. The implementation here doesn’t have this disadvantage: the
+  script runs as soon as the <code>&lt;body&gt;</code> tag opens, but before
+  the rest of the content loads, so the screen is dark from the start.</p>
+
+  <p><a href="https://github.com/riceissa/simple-website-darkmode">Go back to the GitHub repo</a></p>
+
+  <p>All images below are listed in the following order:
+  original (unaltered),
+  non-inverted (dimmed),
+  inverted.</p>
+
+  <p><a href="https://invertornot.com/">Image source</a></p>
+  <img src="bar-graph.png" width="400" />
+  <img src="bar-graph.png" width="400" class="darkmode-no-inversion" />
+  <img src="bar-graph.png" width="400" class="darkmode-inversion" />
+
+  <p><a href="https://pdimagearchive.org/images/2352a122-cf2a-4344-b59c-aae4047419e9/">Image source</a></p>
+  <img src="jamnitzer.jpg" width="400" />
+  <img src="jamnitzer.jpg" width="400" class="darkmode-no-inversion" />
+  <img src="jamnitzer.jpg" width="400" class="darkmode-inversion" />
+
+  <p><a href="https://pdimagearchive.org/images/207dcc0a-f534-447c-97ae-cb63d998fdea/">Image source</a></p>
+  <img src="catesby.jpg" width="400" />
+  <img src="catesby.jpg" width="400" class="darkmode-no-inversion" />
+  <img src="catesby.jpg" width="400" class="darkmode-inversion" />
+
+  <p><a href="https://pdimagearchive.org/images/015221c2-69f7-4128-84d4-255a63d40a45/">Image source</a></p>
+  <img src="schachtzabel.jpg" width="400" />
+  <img src="schachtzabel.jpg" width="400" class="darkmode-no-inversion" />
+  <img src="schachtzabel.jpg" width="400" class="darkmode-inversion" />
+
+  <p><a href="https://pdimagearchive.org/images/11ed28d3-bfd9-401b-a491-fb4d05b2fbe7/">Image source</a></p>
+  <img src="geddes.jpg" width="400" />
+  <img src="geddes.jpg" width="400" class="darkmode-no-inversion" />
+  <img src="geddes.jpg" width="400" class="darkmode-inversion" />
+</body>
+</html>

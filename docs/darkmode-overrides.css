@@ -1,0 +1,15 @@
+body.dark {
+    background-color: rgb(40, 41, 42);
+    /* color: rgb(216, 215, 212); */
+    color: #d4be98; /* trying out this color which I found on
+                     * https://yasserarg.com/tb.css */
+}
+
+body.dark article {
+    background-color: rgb(40, 41, 42);
+    /* color: rgb(216, 215, 212); */
+    color: #d4be98;
+}
+
+body.dark a:link { color: #f0ca35; }
+body.dark a:visited { color: #d04a09; }
