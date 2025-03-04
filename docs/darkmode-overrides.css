@@ -15,7 +15,7 @@ body.dark article {
 }
 
 body.dark a:link { color: #f0ca35; }
-body.dark a:visited { color: #d04a09; }
+body.dark a:visited { color: #ca7d39; }
 
 /* The CSS below is modified from https://invertornot.com/ */
 body.dark img {
@@ -29,4 +29,23 @@ body.dark img.darkmode-invert {
 }
 body.dark img.darkmode-original {
     filter: none;
+}
+
+/* For tables, especially for those using https://mottie.github.io/tablesorter/docs/ */
+body.dark table { background-color: #2b2927; }
+body.dark table th { background-color: #2b2927; }
+
+body.dark table.tablesorter {
+    background-color: #595957;
+    color: #d4be98;
+}
+
+body.dark table.tablesorter thead tr th, body.dark table.tablesorter tfoot tr th {
+    background-color: #393733;
+    border: 1px solid #000000;
+}
+
+body.dark table.tablesorter tbody td {
+    background-color: #2b2927;
+    color: #d4be98;
 }
