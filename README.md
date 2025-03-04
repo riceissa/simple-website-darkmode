@@ -60,7 +60,7 @@ To use Simple Website Darkmode on your website, follow the steps:
    See [`style.css`](docs/style.css) for an example of what your CSS will look
    like.
 
-2. Serve the [`darkmode.js`](docs/darkmode.js) script from your site ([raw download link](https://raw.githubusercontent.com/riceissa/simple-website-darkmode/refs/heads/master/docs/darkmode.js)). Below, we will assume it exists at `./darkmode.js`.
+2. (Optional) Serve the [`darkmode.js`](docs/darkmode.js) script from your site ([raw download link](https://raw.githubusercontent.com/riceissa/simple-website-darkmode/refs/heads/master/docs/darkmode.js)). Below, we will assume it exists at `./darkmode.js`. If you don't want to serve the script yourself, you can also use the jsDelivr CDN (see below).
 
 3. In your HTML, make the following changes:
 
@@ -69,6 +69,12 @@ To use Simple Website Darkmode on your website, follow the steps:
 
    ```html
    <script src="./darkmode.js"></script>
+   ```
+
+   If you want to use the jsDelivr CDN instead, then add the following:
+
+   ```html
+   <script src="https://cdn.jsdelivr.net/gh/riceissa/simple-website-darkmode@latest/docs/darkmode.js"></script>
    ```
 
    Early in the `<body>` tag (e.g. immediately after it opens), add the
