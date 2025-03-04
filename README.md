@@ -29,21 +29,6 @@ To use Simple Website Darkmode on your website, follow the steps:
    body.dark a:visited { color: #d04a09; }
    ```
 
-   Your CSS should probably start with the following:
-
-   ```css
-   :root {
-       color-scheme: light dark;
-   }
-   ```
-
-   The reason is that if the user has JavaScript disabled, then `darkmode.js`
-   will never run, so the site will by default just use light mode. But if your
-   CSS contains the above, then site will be in "auto" mode, so that even
-   though the user won't be able to set a _site-specific_ color preference,
-   they can still set a browser/OS-specific color preference, and the site will
-   just use that preference.
-
    See [`style.css`](docs/style.css) for an example of what your CSS will look
    like.
 
@@ -72,7 +57,22 @@ To use Simple Website Darkmode on your website, follow the steps:
    See [`index.html`](docs/index.html) for an example of what your HTML will
    look like.
 
-4. (Optional) If you want your images to also be darkmode-friendly, you can add
+4. (Optional) Your CSS should also probably start with the following:
+
+   ```css
+   :root {
+       color-scheme: light dark;
+   }
+   ```
+
+   The reason is that if the user has JavaScript disabled, then `darkmode.js`
+   will never run, so the site will by default just use light mode. But if your
+   CSS contains the above, then site will be in "auto" mode, so that even
+   though the user won't be able to set a _site-specific_ color preference,
+   they can still set a browser/OS-specific color preference, and the site will
+   just use that preference.
+
+5. (Optional) If you want your images to also be darkmode-friendly, you can add
    the class `darkmode-inversion` to the images you want to invert, and
    `darkmode-no-inversion` to the images you don't want to invert (but still
    dim down for darkmode). If you don't add either class, the image will be
@@ -101,4 +101,4 @@ To use Simple Website Darkmode on your website, follow the steps:
    ```
 
 See the [demo](https://riceissa.github.io/simple-website-darkmode/) for what
-the end result will look like.
+the end result will look like after all of the steps above.
