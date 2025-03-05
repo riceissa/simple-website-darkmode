@@ -32,8 +32,15 @@ body.dark img.darkmode-original {
 }
 
 /* For tables, especially for those using https://mottie.github.io/tablesorter/docs/ */
-body.dark table { background-color: #2b2927; }
-body.dark table th { background-color: #2b2927; }
+body.dark table {
+    background-color: rgb(40, 41, 42);
+    border-color: #cccccc;
+}
+body.dark table th { background-color: rgb(40, 41, 42); }
+
+body.dark table tbody tr { border-color: #cccccc; }
+body.dark table thead th { border-color: #cccccc; }
+body.dark table tfoot th { border-color: #cccccc; }
 
 body.dark table.tablesorter {
     background-color: #595957;
@@ -46,6 +53,6 @@ body.dark table.tablesorter thead tr th, body.dark table.tablesorter tfoot tr th
 }
 
 body.dark table.tablesorter tbody td {
-    background-color: #2b2927;
+    background-color: rgb(40, 41, 42);
     color: #d4be98;
 }
