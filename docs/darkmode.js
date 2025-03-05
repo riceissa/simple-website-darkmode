@@ -98,7 +98,6 @@ var darkmode;
         recompute_body_class();
     }
     darkmode.set_color = set_color;
-    ;
     // This function runs once on each page load.
     function initialize() {
         add_darkmode_menu();
@@ -106,5 +105,4 @@ var darkmode;
         recompute_body_class();
     }
     darkmode.initialize = initialize;
-    ;
 })(darkmode || (darkmode = {}));

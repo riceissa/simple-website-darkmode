@@ -29,13 +29,13 @@ namespace darkmode {
                 .forEach((c) => {
                     const option_el = document.getElementById(c + "-menu-option");
                     if (option_el) {
-                        option_el.style.textDecoration = "none"
+                        option_el.style.textDecoration = "none";
                     } else {
                         console.log(`Could not find ${c}-menu-option`);
                     }
-            });
+                });
         } else {
-            console.log(`Could not find ${color}-menu-option`)
+            console.log(`Could not find ${color}-menu-option`);
         }
     }
 
@@ -96,12 +96,12 @@ namespace darkmode {
         localStorage.setItem("color", color);
         set_visual_feedback_color(color);
         recompute_body_class();
-    };
+    }
 
     // This function runs once on each page load.
     export function initialize(): void {
         add_darkmode_menu();
         set_theme_from_local_storage();
         recompute_body_class();
-    };
+    }
 }
