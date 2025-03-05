@@ -108,7 +108,7 @@ Then, in your CSS, add the following:
 ```css
 /* The CSS below is modified from https://invertornot.com/ */
 body.dark img.darkmode-dim {
-    filter: grayscale(50%) brightness(85%);
+    filter: brightness(85%);
 }
 body.dark img.darkmode-invert {
     filter: grayscale(50%) invert(100%) brightness(95%) hue-rotate(180deg);
