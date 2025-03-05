@@ -45,7 +45,7 @@ the end result will look like after all of the steps above.
 
 For defining your darkmode color scheme, you have two choices.
 
-Option A: In your CSS, you can define all of your colors using
+Option A (recommended): In your CSS, you can define all of your colors using
 [`light-dark()`](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark). Your CSS will look like:
 
 ```css
